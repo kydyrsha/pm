@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* general styles */
 * {
     box-sizing: border-box;
     margin:0;
@@ -5,17 +7,24 @@
 
 body {
     background:#000;
-    background-image: url("/assets/img/pm-bg.png");
+    background-image: url("pm-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top;
-    background-attachment: fixed;
+    height: 100vh;
+    width:100%;
     font-family: 'Parimatch-regular', sans-serif;
+    color:var(--white);
+}
+
+section {
+    position: relative;
 }
 
 :root {
     --primary:#F8FF13;
     --white:#FFFFFF;
+    --black:#000000;
 }
 
 @font-face {
@@ -36,6 +45,7 @@ body {
     font-weight: 800;
 }
 
+/* header */
 
 .main-header {
     padding:20px 8px;
@@ -47,6 +57,10 @@ body {
 .main-header > div {
     display: flex;
     align-items: center;
+}
+
+.main-header .header-left > img:first-child {
+    margin-right: 7px;
 }
 
 .main-header .header-right > img:first-child {
@@ -62,4 +76,199 @@ body {
     text-decoration: none;
     padding:6px 9px;
     margin-left:3px;
+}
+
+/* main banner */
+
+.main-banner > img:not(:first-child) {
+    position: absolute;
+}
+
+.main-banner .bonus {
+    margin:auto;
+    display:block;
+}
+
+.main-banner .football {
+    left:0;
+    bottom:-45%;
+    z-index: -1;
+}
+
+.main-banner .volleyball {
+    right:0;
+    bottom:-95%;
+    z-index: -1;
+}
+
+.main-banner .tennis {
+    left:0;
+    top:0;
+}
+
+.main-banner .basketball {
+    right:0;
+    top:-20%;
+    z-index: -1;
+}
+
+.main-banner .spaceman {
+    top:55%;
+    right:38%;
+}
+
+/* offer */
+
+.offer .title {
+    text-transform: uppercase;
+    color:var(--primary);
+    font-weight: 800;
+    text-align: center;
+    line-height: 122px;
+    font-size:107px;
+    font-style:italic;
+    text-shadow: 0px 0px 16px 0px #00000080;
+    font-family: 'Parimatch-bold', sans-serif;
+}
+
+.offer .subtitle {
+    color:var(--white);
+    text-align: center;
+    line-height: 37px;
+    font-weight: 800;
+    font-size:32.2px;
+}
+
+.offer .get-bonus {
+    background-image: url("bonus-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:var(--black);
+    font-weight: 600;
+    font-style:italic;
+    line-height: 30px;
+    font-size:26px;
+    text-align: center;
+    text-decoration: none;
+    padding:8px 41px;
+    display: block;
+    width:100%;
+    max-width:242px;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Parimatch-medium', sans-serif;
+    margin-top:65px;
+}
+
+.offer .terms-bonus {
+    text-align: center;
+    font-size:14px;
+    display: block;
+    color:var(--white);
+    margin-top:13px;
+}
+
+/* bonus conditions */
+.bonus-conditions .condition {
+    display: flex;
+    align-items: center;
+    width:100%;
+}
+
+.bonus-conditions .condition .bonus-text {
+    color:var(--white);
+}
+
+.bonus-conditions .condition > img {
+    width:100%;
+    max-width:86px;
+}
+
+/* more offer */
+
+.more-offer .title {
+    font-size:32px;
+    font-weight: 800;
+    line-height: 36px;
+    font-style: italic;
+    color:var(--white);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.more-offer .steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.more-offer .step {
+    display: flex;
+    align-items: center;
+    background: url("offer-bg.png"), linear-gradient(253.09deg, rgba(217, 217, 217, 0.25) -7.53%, rgba(217, 217, 217, 0) 97.04%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(31.5366px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20.8141px;
+    /*transform: matrix(-1, 0, 0, 1, 0, 0);*/
+    width:100%;
+    max-width:276px;
+    margin:auto;
+}
+
+.more-offer .step:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.more-offer .step > img {
+    margin-right:17px;
+    padding:1rem;
+}
+
+/* downloads block */
+
+.downloads {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    max-width:272px;
+    margin: auto;
+    margin-top:62px;
+}
+
+.downloads > img {
+    width:100%;
+    max-width:130px;
+    display: block;
+}
+
+/* socials */
+
+.socials {
+    width:100%;
+    max-width:171px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    margin-top:25px;
+}
+
+.disclaimer {
+    text-align:center;
+    font-size:8px;
+    line-height: 9.38px;
+    font-weight: 400;
+    color:var(--white);
+    font-family: 'Roboto', sans-serif;
+    width:100%;
+    max-width:253px;
+    margin:auto;
+    padding-bottom: 37px;
 }

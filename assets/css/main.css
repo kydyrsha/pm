@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+body {
+    background:#000;
+    background-image: url("/assets/img/pm-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    font-family: 'Parimatch-regular', sans-serif;
+}
+
+:root {
+    --primary:#F8FF13;
+    --white:#FFFFFF;
+}
+
+@font-face {
+    font-family: 'Parimatch-regular', sans-serif;
+    src: url("/assets/fonts/Parimatch-Regular.otf") format("otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Parimatch-medium', sans-serif;
+    src: url("/assets/fonts/Parimatch-Medium.otf") format("otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Parimatch-bold', sans-serif;
+    src: url("/assets/fonts/Parimatch-Bold.otf") format("otf");
+    font-weight: 800;
+}
+
+
+.main-header {
+    padding:20px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header > div {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .header-right > img:first-child {
+    margin-right: 3px;
+}
+
+.main-header .reg-btn {
+    font-size:11px;
+    color: var(--primary);
+    line-height: 13px;
+    border: 0.9px solid var(--primary);
+    border-radius: 7.2px;
+    text-decoration: none;
+    padding:6px 9px;
+    margin-left:3px;
+}
